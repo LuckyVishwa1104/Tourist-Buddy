@@ -2,17 +2,65 @@
 <html lang="en">
 <head>
     <title>Login</title>
-
     <style>
+        body {
+            background-color: aliceblue;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-        .flx
-        {
+        .flx {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
-        
-        .a
-        {
+
+        .a {
+            background-image: linear-gradient(120deg,#2E3192 , #1BFFFF);
+            border-radius: 5px;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            font-size: 25px;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .b {
+            background-image: linear-gradient(120deg,#009245, #FCEE21);
+            border-radius: 5px;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            padding: 40px;
+            box-sizing: border-box;
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .textgradient {
+            font-size: 50px;
+            background: -webkit-linear-gradient(89.1deg,#cc2b5e, #753a88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            text-align: center;
+            margin: 50px 0 30px;
+        }
+
+        .d {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-btn {
+            padding: 20px;
             background-image: linear-gradient(120deg,#2E3192 , #1BFFFF);
             border-radius: 5px;
             border-color: black;
@@ -20,53 +68,48 @@
             border-style: solid;
             font-size: 25px;
             margin-bottom: 50px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
         }
 
-        .b
-        {
-            background-image: linear-gradient(120deg,#009245, #FCEE21);
-            border-radius: 5px;
-            border-color: black;
-            border-width: 2px;
-            border-style: solid;
+        .login-btn d {
+            display: inline-block;
+            margin: 0 auto;
         }
 
-        .textgadient
-        {
-            /* margin-left: 10px; */
-            font-size: 50px;
-            background: -webkit-linear-gradient(89.1deg,#cc2b5e, #753a88);
-            -webkit-background-clip: text;
-            background-clip: var();
-            -webkit-text-fill-color: transparent;
-            font-weight: 600;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
-            
-        }
+        @media (max-width: 600px) {
+            .textgradient {
+                font-size: 36px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
 
-        .d 
-        {
-            font-size:26px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+            .d {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
 
+            .a {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .login-btn {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
     </style>
-
 </head>
 
-<body style="background-color:aliceblue;">
-
-    <div class="textgadient">TouristBuddy.com</div>
-
-    <div class="flx b" style="margin-left: 450px; margin-right: 450px; padding: 55px;">
+<body>
+    <div class="textgradient">TouristBuddy.com</div>
+    <div class="flx b">
         <div class="d">Log in to TouristBuddy.com</div>
-        <div style="text-align: center;"><input type="text" placeholder="enter email or phone number" class="a" style="padding: 20px;"></div>
-        <div style="text-align: center;"><input type="password" placeholder="enter passward" class="a" style="padding: 20px;"></div>
-        <div style="text-align: center;"><button class="a" style="padding: 20px;"><d style="margin-left: 125px; margin-right: 125px;">Login</d></button></div>
+        <input type="text" placeholder="enter email or phone number" class="a">
+        <input type="password" placeholder="enter password" class="a">
+        <button class="login-btn"><d>Login</d></button>
     </div>
-
 </body>
 </html>
